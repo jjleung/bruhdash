@@ -140,8 +140,7 @@ global.bruhdash = {
 
   // creates an array excluding all the specified values
   without: function(arr, ...vals) {
-    console.log(arr);
-    console.log(vals);
+
     if(Boolean(vals) === false){
       return arr;
     }else{
@@ -159,8 +158,20 @@ global.bruhdash = {
   },
 
   // returns an array with specified values excluded
-  difference: function() {
+  difference: function(arr, vals) {
 
+    if(Boolean(vals) === false){
+      return arr;
+    }else{
+      for(var i = 0; i < arr.length; i++){
+        for(var j = 0; j < vals.length; j++){
+          if(arr[i] === vals[j]){
+            arr.splice(i,1);
+          }
+        }
+      }
+      return arr;
+    }
   },
 
   /*******************
