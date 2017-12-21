@@ -120,7 +120,7 @@ global.bruhdash = {
     }
     else{
       return arr;
-    // }
+    }
   },
 
   // removes elements of an array corresponding to the given indices
